@@ -8,11 +8,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const projectImages = [
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
-  "https://images.unsplash.com/photo-1600607687940-4e5272745b5a",
-  "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+  "/project.png",
+"/project1.png",
+"/project2.png",
+"/project4.png",
+ "/project3.png",
+  "/project9.png",
+   "/project8.png",
+ "/project5.jpg",
+ "/project6.jpg",
 ];
 
 const ProjectSlider = () => {
