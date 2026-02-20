@@ -37,7 +37,7 @@ function Note() {
 
                 <div className="mt-2 text-right">
                     <p className="italic font-medium">With Purpose,</p>
-                    <div className="inline-block mt-2 w-12 h-12 bg-white/90 rounded-full"></div>
+                    <img className="inline-block mt-2 w-12 h-12  rounded-full" src='/milan.jpeg'/>
                 </div>
             </div>
         </div>

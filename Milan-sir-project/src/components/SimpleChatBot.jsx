@@ -20,8 +20,8 @@ const SimpleChatBot = () => {
     const formData = new FormData(e.target);
     
     // Replace with your Web3Forms Access Key
-      formData.append("access_key", "8bd04afa-e855-432b-9bf4-c001f9936874");
-    formData.append("subject", "website");
+      formData.append("access_key", "aad71b87-b40d-4aa7-8c71-f5436b9c3186");
+    formData.append("subject", "Query");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {

@@ -112,12 +112,12 @@ const BuiltStories = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const videos = [
-    { id: 1, url: "/video.mp4" },
-    { id: 2, url: "/video.mp4" },
-    { id: 3, url: "/video.mp4" },
-    { id: 4, url: "/video.mp4" },
-    { id: 5, url: "/video.mp4" },
-    { id: 6, url: "/video.mp4" },
+    { id: 1, url: "/story1.mp4" },
+    { id: 2, url: "/story2.mp4" },
+    { id: 3, url: "/story3.mp4" },
+    { id: 4, url: "/story4.mp4" },
+    { id: 5, url: "/story5.mp4" },
+    { id: 6, url: "/story6.mp4" },
   ];
 
   return (

@@ -1,21 +1,26 @@
 import React from 'react';
 
 const column1 = [
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-  "https://images.unsplash.com/photo-1600607687940-4e5272745b5a",
-  "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+  "/project.png",
+"/project1.png",
+"/project2.png",
 ];
 
 const column2 = [
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-  "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68",
+"/project4.png",
+ "/project3.png",
+  "/project9.png",
 ];
 
 const column3 = [
-  "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6",
-  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
-  "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
+ "/project8.png",
+ "/project5.jpg",
+ "/project6.jpg",
+];
+const column4 = [
+ "/project7.jpg",
+ "/project.png",
+ "/project4.png",
 ];
 
 const ScrollingColumn = ({ images, speedClass }) => (
@@ -59,7 +64,7 @@ const VerticalSlider = () => {
               <ScrollingColumn images={column3} speedClass="animate-scroll-fast" />
             </div>
             <div className="hidden lg:block h-full">
-              <ScrollingColumn images={column2} speedClass="animate-scroll-slow" />
+              <ScrollingColumn images={column4} speedClass="animate-scroll-slow" />
             </div>
           </div>
           {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-linear-to-b from-black via-black/40 to-transparent z-20" />

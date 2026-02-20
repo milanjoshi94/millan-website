@@ -19,8 +19,8 @@ const AboutMe = () => {
         </div>
 
         {/* Image Placeholder Box */}
-        <div className="w-full md:w-1/3 aspect-square bg-zinc-300 rounded-[10px] shadow-2xl z-10">
-          {/* Replace this div with an <img> tag when you have the headshot */}
+        <div className="w-full md:w-1/3 aspect-square rounded-xl shadow-2xl z-10">
+          <img className="inline-block " src='/milan.jpeg'/>
         </div>
       </div>
     </section>
