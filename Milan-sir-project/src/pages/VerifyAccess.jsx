@@ -1,47 +1,45 @@
-import React, { useEffect } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import axios from 'axios';
-import { useAccess } from '../context/AccessContext';
+import { useNavigate } from 'react-router-dom';
 
 const VerifyAccess = () => {
-  const [searchParams] = useSearchParams();
-  const { setHasAccess } = useAccess();
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const verifyAndGrant = async () => {
+  const handleVerify = async () => {
+    setLoading(true);
+    try {
+      const { data } = await axios.post('https://milan-website-backendfreelance-backend.onrender.com/api/payments/verify-purchase', { email });
 
-      const paymentId = searchParams.get('payment_id');
-
-      if (!paymentId) return;
-
-      try {
-
-        const { data } = await axios.post(
-          'http://localhost:5000/api/payments/verify-redirect',
-          { payment_id: paymentId }
-        );
-
-        if (data.success) {
-          localStorage.setItem('course_token', data.token);
-          setHasAccess(true);
-          navigate('/course-content');
-        } else {
-          navigate('/buy-course');
-        }
-
-      } catch (err) {
-        alert("Verification failed. Please contact support.");
+      if (data.success) {
+        localStorage.setItem('course_auth_token', data.token);
+        navigate('/course-content');
       }
-
-    };
-
-    verifyAndGrant();
-  }, [searchParams]);
+    } catch (err) {
+      alert(err.response?.data?.message || "Verification failed.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <div className="text-white text-center mt-20">
-      Verifying your membership...
+    <div className="flex flex-col items-center justify-center h-screen bg-black text-white">
+      <h2>Success! Now enter your email to get access</h2>
+      <input 
+        type="email" 
+        placeholder="Email used for payment"
+        className="p-2 m-4 text-black"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <button 
+        onClick={handleVerify}
+        className="bg-blue-600 px-6 py-2 rounded"
+        disabled={loading}
+      >
+        {loading ? "Checking..." : "Get Access"}
+      </button>
     </div>
   );
 };
