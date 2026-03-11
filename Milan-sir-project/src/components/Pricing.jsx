@@ -9,7 +9,7 @@ const Pricing = () => {
     if (hasAccess) {
       window.location.href = "/course-content";
     } else {
-      window.open("https://pages.razorpay.com/pl_R1BekQZBIbHDAG/view", "_blank");
+      window.open("https://pages.razorpay.com/pl_SPsoPMl2CtMX0Y/view", "_blank");
     }
   };
   return (
