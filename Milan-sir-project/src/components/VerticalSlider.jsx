@@ -24,7 +24,7 @@ const column4 = [
 ];
 
 const ScrollingColumn = ({ images, speedClass }) => (
-  <div className="h-full overflow-hidden">
+  <div className="h-full overflow-hidden pause-on-hover ">
     <div className={`scrolling-content gap-4 ${speedClass}`}>
       {[...images, ...images].map((src, i) => (
         <div key={i} className="w-full shrink-0 px-1">
@@ -54,7 +54,7 @@ const VerticalSlider = () => {
         <a href='#pricing' className='bg-[#ECD4AA] lora-700 cursor-pointer text-lg md:text-2xl px-5 py-2 rounded-lg hover:bg-[#ECD4AA]/90 transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-102'>Become a member</a>
       </div>
       <div className="flex justify-center items-center  min-h-screen max-w-7xl mx-auto py-8 px-4 lg:px-0 ">
-        <div className="relative h-screen w-full overflow-hidden pause-on-hover rounded-sm">
+        <div className="relative h-screen w-full overflow-hidden rounded-sm">
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 h-full">
             <ScrollingColumn images={column1} speedClass="animate-scroll-fast" />
             <div className="hidden md:block h-full">
