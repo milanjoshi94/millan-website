@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rakkas&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rakkas&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 @import "tailwindcss";
 
 body {
@@ -57,6 +59,17 @@ html {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+}
+.edu-tas-beginner-700 {
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.madimi-one-700 {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 
