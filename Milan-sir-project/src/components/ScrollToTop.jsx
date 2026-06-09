@@ -4,7 +4,7 @@ import { ChevronUp } from 'lucide-react';
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled down
+  // Show button when page is scrolled downand up
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
       setIsVisible(true);
