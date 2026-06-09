@@ -53,7 +53,7 @@ const SimpleChatBot = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 z-[100]">
+    <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100]">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`p-4 rounded-full transition-all duration-500 shadow-2xl flex items-center justify-center cursor-pointer
@@ -63,13 +63,31 @@ const SimpleChatBot = () => {
         {isOpen ? <X size={24} className="text-white" /> : <MessageSquare size={24} />}
       </button>
 
-      <div className={`
-        absolute bottom-20 right-0 w-80 bg-zinc-950 border border-white/10 rounded-2xl shadow-2xl overflow-hidden
-        transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-        ${isOpen 
-          ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto' 
-          : 'opacity-0 translate-y-10 scale-90 pointer-events-none'}
-      `}>
+      <div
+  className={`
+    fixed md:absolute
+    bottom-0 md:bottom-20
+    left-1/2
+-translate-x-1/2
+md:left-auto
+md:translate-x-0
+md:right-0
+w-[90vw] md:w-80
+    h-[75dvh] md:h-auto
+    bg-zinc-950
+    border border-white/10
+    rounded-t-3xl md:rounded-2xl
+    shadow-2xl
+    overflow-hidden
+    transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+
+    ${
+      isOpen
+        ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto'
+        : 'opacity-0 translate-y-full md:translate-y-10 scale-95 pointer-events-none'
+    }
+  `}
+>
         <div className="bg-white p-4 flex items-center gap-3">
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
           <span className="text-black font-bold text-sm">Drop a Message</span>
