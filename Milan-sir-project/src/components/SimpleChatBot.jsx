@@ -18,9 +18,9 @@ const SimpleChatBot = () => {
     setStatus('sending');
 
     const formData = new FormData(e.target);
-    
+
     // Replace with your Web3Forms Access Key
-      formData.append("access_key", "aad71b87-b40d-4aa7-8c71-f5436b9c3186");
+    formData.append("access_key", "aad71b87-b40d-4aa7-8c71-f5436b9c3186");
     formData.append("subject", "Query");
 
     try {
@@ -33,9 +33,9 @@ const SimpleChatBot = () => {
 
       if (data.success) {
         setStatus('success');
-        
+
         // --- THIS CLEARS THE INPUTS ---
-        e.target.reset(); 
+        e.target.reset();
 
         // Automatically close after 3 seconds
         setTimeout(() => {
@@ -64,16 +64,15 @@ const SimpleChatBot = () => {
       </button>
 
       <div
-  className={`
-    fixed md:absolute
-    bottom-0 md:bottom-20
+        className={`
+    fixed inset-0 md:absolute md:inset-auto md:bottom-20 
     left-1/2
 -translate-x-1/2
 md:left-auto
 md:translate-x-0
 md:right-0
-w-[90vw] md:w-80
-    h-[75dvh] md:h-auto
+w-full md:w-80
+h-full md:h-auto
     bg-zinc-950
     border border-white/10
     rounded-t-3xl md:rounded-2xl
@@ -81,19 +80,29 @@ w-[90vw] md:w-80
     overflow-hidden
     transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
 
-    ${
-      isOpen
-        ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto'
-        : 'opacity-0 translate-y-full md:translate-y-10 scale-95 pointer-events-none'
-    }
+    ${isOpen
+            ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto'
+            : 'opacity-0 translate-y-full md:translate-y-10 scale-95 pointer-events-none'
+          }
   `}
->
-        <div className="bg-white p-4 flex items-center gap-3">
-          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          <span className="text-black font-bold text-sm">Drop a Message</span>
+      >
+        <div className="bg-white p-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            <span className="text-black font-bold text-sm">
+              Drop a Message
+            </span>
+          </div>
+
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-1 rounded-full hover:bg-black/10 transition-colors"
+          >
+            <X size={20} className="text-black" />
+          </button>
         </div>
 
-        <div className="p-5 min-h-[300px] flex flex-col justify-center">
+        <div className="p-5 h-full overflow-y-auto">
           {status === 'success' ? (
             <div className="flex flex-col items-center justify-center text-center space-y-3 animate-in fade-in zoom-in duration-500">
               <CheckCircle2 size={48} className="text-green-500" />
@@ -131,7 +140,7 @@ w-[90vw] md:w-80
               >
                 {status === 'sending' ? "Sending..." : <>Send Message <Send size={14} /></>}
               </button>
-              
+
               {status === 'error' && (
                 <p className="text-red-500 text-[10px] text-center mt-2">Something went wrong. Please try again.</p>
               )}

@@ -1,26 +1,38 @@
 import React from 'react';
 
 const column1 = [
-  "/project.png",
-"/project1.png",
-"/project2.png",
+  "/project18.jpeg",
+  "/project1.png",
+  "/project22.jpeg",
+  "/project5.jpg",
+  "/project10.jpeg",
+  "/project3.png",
 ];
 
 const column2 = [
-"/project4.png",
- "/project3.png",
-  "/project9.png",
+  "/project25.jpeg",
+  "/project6.jpg",
+  "/project13.jpeg",
+  "/project4.png",
+  "/project20.jpeg",
+  "/project11.jpeg",
 ];
 
 const column3 = [
- "/project8.png",
- "/project5.jpg",
- "/project6.jpg",
+  "/project8.png",
+  "/project26.jpeg",
+  "/project2.png",
+  "/project17.jpeg",
+  "/project9.png",
+  "/project24.jpeg",
 ];
+
 const column4 = [
- "/project7.jpg",
- "/project.png",
- "/project4.png",
+  "/project12.jpeg",
+  "/project.png",
+  "/project21.jpeg",
+  "/project15.jpeg",
+  "/project19.jpeg",
 ];
 
 const ScrollingColumn = ({ images, speedClass }) => (

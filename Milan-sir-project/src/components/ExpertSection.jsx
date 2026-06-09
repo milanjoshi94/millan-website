@@ -24,7 +24,7 @@ const ExpertSection = () => {
         {cardData.map((item, index) => (
           <div 
             key={index} 
-            className="bg-[#ECD4AA] p-5 rounded-[10px] flex flex-col items-start text-left  transition-transform hover:scale-105 duration-300"
+            className="bg-[#ECD4AA] p-5 rounded-[10px] flex flex-col items-start text-left  "
           >
             <div className="mb-4">
          <img className="w-10 h-10" src= {item.icon} />    

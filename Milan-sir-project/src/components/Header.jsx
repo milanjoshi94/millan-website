@@ -10,10 +10,10 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto flex items-center justify-between lg:justify-center lg:gap-16">
         
         {/* Mobile Logo or Contact (Visible only on small screens) */}
-        <div className="lg:hidden flex items-center gap-2 text-black">
+        {/* <div className="lg:hidden flex items-center gap-2 text-black">
           <Phone size={18} strokeWidth={1.5} fill="currentColor" />
           <span className="lora-600 text-lg">+91-9782317020</span>
-        </div>
+        </div> */}
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-16">
@@ -27,12 +27,12 @@ const Header = () => {
             Projects
           </a>
           
-          <div className="flex items-center gap-2 text-black ml-4">
+          {/* <div className="flex items-center gap-2 text-black ml-4">
             <Phone size={20} strokeWidth={1.5} fill="currentColor" />
             <span className="lora-600 text-xl">
               Contact - +91-9782317020
             </span>
-          </div>
+          </div> */}
         </div>
 
         <button 
@@ -52,10 +52,10 @@ const Header = () => {
           <a href="#home" onClick={() => setIsOpen(false)} className="text-black lora-600 text-lg">Home</a>
           <a href="#about" onClick={() => setIsOpen(false)} className="text-black lora-600 text-lg">About us</a>
           <a href="#projects" onClick={() => setIsOpen(false)} className="text-black lora-600 text-lg">Projects</a>
-          <div className="pt-4 border-t border-black/10 flex items-center gap-3 text-black">
+          {/* <div className="pt-4 border-t border-black/10 flex items-center gap-3 text-black">
             <Phone size={18} strokeWidth={1.5} fill="currentColor" />
             <span className="lora-600">+91-9782317020</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
